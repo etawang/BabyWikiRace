@@ -1,9 +1,33 @@
 import wikipedia
 import random
+import util
 
 
-def bfs(startNode):
-    currNode=
+
+def bfs(startNode, endNode):
+    frontier = util.Queue()
+    visited=set([])
+    intialState = startNode
+
+    movessofar = []
+
+    frontier.push((initialState,[],0))
+
+    while not frontier.isEmpty():
+        (node,path,cost) = frontier.pop()
+        if node not in visited:
+            visited.add(node)
+
+            if node == endNode:
+                return path
+            else:
+                for link in wikipedia.page(startTopic).links:
+                    npath = path[:]
+                    npath.append(link)
+
+                    frontier.push((link,npath,cost+1))
+    return []
+
 
 def returnRandomLink(linkList):
     randIndex = random.randint(0,len(linkList)-1)
@@ -32,6 +56,8 @@ def main():
 
     raw_input()
     print topiclist
+
+
 
 if __name__ == '__main__':
     main()
