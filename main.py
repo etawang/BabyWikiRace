@@ -4,29 +4,6 @@ import util
 
 
 
-def bfs(startNode, endNode):
-    frontier = util.Queue()
-    visited=set([])
-    intialState = startNode
-
-    movessofar = []
-
-    frontier.push((initialState,[],0))
-
-    while not frontier.isEmpty():
-        (node,path,cost) = frontier.pop()
-        if node not in visited:
-            visited.add(node)
-
-            if node == endNode:
-                return path
-            else:
-                for link in wikipedia.page(startTopic).links:
-                    npath = path[:]
-                    npath.append(link)
-
-                    frontier.push((link,npath,cost+1))
-    return []
 
 
 def returnRandomLink(linkList):
@@ -38,24 +15,30 @@ def getNext(startTopic):
     startPage = wikipedia.page(startTopic)
     return returnRandomLink(startPage.links)
 
+def getTarget(startTopic, jumps):
+    currentTopic = startTopic
+
+    topiclist=[]
+
+    for i in xrange(jumps):
+        topiclist.append(currentTopic)
+        currentTopic = getNext(startTopic)
+    topiclist.append(currentTopic)
+    return (currentTopic, topiclist)
+
+
 def main():
     print "Enter Start Page:"
     startTopic = raw_input()
     print "Enter Jumps:"
     x = int(raw_input())
-    currentTopic = startTopic
 
-    topiclist=[]
-
-    for i in xrange(x):
-        topiclist.append(currentTopic)
-        currentTopic = getNext(startTopic)
-    topiclist.append(currentTopic)
-    print "End Topic: " + currentTopic
+    (endTopic, path) = getTarget(startTopic, x)
+    print "End Topic: " + endTopic
     print "GO! Press enter to see answer."
 
     raw_input()
-    print topiclist
+    print path
 
 
 
