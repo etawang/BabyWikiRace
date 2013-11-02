@@ -24,8 +24,9 @@
 
 import wikipedia
 import random
-import util
+import imp
 
+util = imp.load_source('util', 'lib/util.py')
 
 """
 returnRandomLink
