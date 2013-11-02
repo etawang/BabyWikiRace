@@ -95,7 +95,7 @@ def getTarget(startTopic, jumps):
         topiclist.append(currentTopic)
 
         # Get next topic
-        nextTopic = getNext(startTopic)
+        nextTopic = getNext(currentTopic)
 
         # Break if no more links
         if currentTopic == None:
