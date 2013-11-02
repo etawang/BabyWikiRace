@@ -2,6 +2,9 @@ import wikipedia
 import random
 
 
+def bfs(startNode):
+    currNode=
+
 def returnRandomLink(linkList):
     randIndex = random.randint(0,len(linkList)-1)
     return linkList[randIndex]
@@ -9,7 +12,7 @@ def returnRandomLink(linkList):
 
 def getNext(startTopic):
     startPage = wikipedia.page(startTopic)
-    return returnRandomLink(startPage.links)    
+    return returnRandomLink(startPage.links)
 
 def main():
     print "Enter Start Page:"
@@ -26,7 +29,7 @@ def main():
     topiclist.append(currentTopic)
     print "End Topic: " + currentTopic
     print "GO! Press enter to see answer."
-    
+
     raw_input()
     print topiclist
 
