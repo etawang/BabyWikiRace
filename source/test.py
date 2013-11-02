@@ -6,6 +6,7 @@ import main
 
 class TestMain(unittest.TestCase):
 
+    #start with the topic 'sailboat'
     def setUp(self):
         self.startTopic = 'sailboat'
 
