@@ -4,7 +4,7 @@
 
     How to wikirace without Friends
 
-    Copyright (C) 2013 Brandon Lum & Esther Wang
+    Copyright (C) 2013 Brandon Lum & Esther Wang & Eric Gan
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -113,7 +113,7 @@ def main():
 
 
     print """
-    Copyright (C) 2013 Brandon Lum & Esther Wang
+    Copyright (C) 2013 Brandon Lum & Esther Wang & Eric Gan
 
     This program comes with ABSOLUTELY NO WARRANTY;
     This is free software, and you are welcome to redistribute it under certain conditions;

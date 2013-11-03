@@ -20,7 +20,7 @@ Sample Input.Output:
 
 Brandons-MacBook-Air:BabyWikiRace brandon$ python main.py
 
-    Copyright (C) 2013 Brandon Lum & Esther Wang
+    Copyright (C) 2013 Brandon Lum & Esther Wang & Eric Gan
 
     This program comes with ABSOLUTELY NO WARRANTY;
     This is free software, and you are welcome to redistribute it under certain conditions;
